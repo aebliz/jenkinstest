@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Verification Step') {
+            steps {
+                sh 'my_var=$GIT_BRANCH'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Build Stage'
@@ -19,7 +24,9 @@ pipeline {
         stage('Archive') {
             steps {
                 echo 'Create Artifact'
-                sh 'simple_script.py'
+            }
+            steps {
+                sh '\\$my_var\python3 simple_script.py'
             }            
         }            
     }

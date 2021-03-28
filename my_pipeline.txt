@@ -26,7 +26,8 @@ pipeline {
                 echo 'Create Artifact'
             }
             steps {
-                sh '\\$my_var\python3 simple_script.py'
+                 echo "\\$my_var"
+                // sh '\\$my_var\python3 simple_script.py'
             }            
         }            
     }

@@ -24,7 +24,7 @@ pipeline {
         stage('Archive') {
             steps {
                 echo 'Create Artifact'
-                echo "\\$my_var"
+                sh 'python --version'
                 // sh '\\$my_var\python3 simple_script.py'
             }            
         }            

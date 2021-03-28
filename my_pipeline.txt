@@ -19,6 +19,7 @@ pipeline {
         stage('Archive') {
             steps {
                 echo 'Create Artifact'
+                python3 simple_script.py > ../my_archive.txt
             }
         }            
     }

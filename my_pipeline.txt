@@ -21,7 +21,7 @@ pipeline {
                 echo 'Create Artifact'
             }
             steps {
-                python3 simple_script.py > ../my_archive.txt
+                sh python3 simple_script.py
             }            
         }            
     }

@@ -11,9 +11,14 @@ pipeline {
                 echo 'Test Stage'
             }
         }
-        stage('Deploy') {
+         stage('Deploy') {
             steps {
                 echo 'Deploy Stage'
+            }
+        }       
+        stage('Archive') {
+            steps {
+                echo 'Create Artifact'
             }
         }            
     }

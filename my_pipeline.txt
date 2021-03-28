@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Verification Step') {
-            steps {
-                sh 'my_var=$GIT_BRANCH'
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Build Stage'
@@ -21,12 +16,5 @@ pipeline {
                 echo 'Deploy Stage'
             }
         }       
-        stage('Archive') {
-            steps {
-                echo 'Create Artifact'
-                sh 'try_webhook.sh'
-                // sh '\\$my_var\python3 simple_script.py > ../myarchive.txt'
-            }            
-        }            
     }
 }

@@ -24,8 +24,8 @@ pipeline {
         stage('Archive') {
             steps {
                 echo 'Create Artifact'
-                sh 'python --version'
-                // sh '\\$my_var\python3 simple_script.py'
+                sh 'try_webhook.sh'
+                // sh '\\$my_var\python3 simple_script.py > ../myarchive.txt'
             }            
         }            
     }

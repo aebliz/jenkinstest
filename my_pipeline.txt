@@ -24,9 +24,7 @@ pipeline {
         stage('Archive') {
             steps {
                 echo 'Create Artifact'
-            }
-            steps {
-                 echo "\\$my_var"
+                echo "\\$my_var"
                 // sh '\\$my_var\python3 simple_script.py'
             }            
         }            

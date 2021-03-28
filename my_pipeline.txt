@@ -19,8 +19,6 @@ pipeline {
         stage('Archive') {
             steps {
                 echo 'Create Artifact'
-            }
-            steps {
                 sh python3 simple_script.py
             }            
         }            
